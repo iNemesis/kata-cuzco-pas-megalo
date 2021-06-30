@@ -1,7 +1,8 @@
 package com.company.application;
 
-import com.company.usecase.ChambrePort;
-import com.company.usecase.RecupererLesChambres;
+import com.company.usecase.recherche.ChambrePort;
+import com.company.usecase.recherche.RechercherChambresParCapacite;
+import com.company.usecase.recherche.RecupererLesChambres;
 
 public class ChambreApplication {
 
@@ -14,8 +15,12 @@ public class ChambreApplication {
     public void printTableauDeChambres() {
         var récupérerLesChambres = new RecupererLesChambres(chambrePort);
 
-
-
         System.out.println(récupérerLesChambres.exécuter());
+    }
+
+    public void printTableauDeChambresAvecCapacitéMinimum(int capacitéMinimum) {
+        var rechercherChambresParCapacité = new RechercherChambresParCapacite(chambrePort);
+
+        System.out.println(rechercherChambresParCapacité.exécuter(capacitéMinimum));
     }
 }

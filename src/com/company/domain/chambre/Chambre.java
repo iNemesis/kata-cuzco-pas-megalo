@@ -1,6 +1,6 @@
-package com.company.domain;
+package com.company.domain.chambre;
 
-import com.company.domain.Lit.Lit;
+import com.company.domain.chambre.Lit.Lit;
 
 import java.util.List;
 import java.util.Objects;
@@ -55,5 +55,9 @@ public class Chambre {
                 ", étage='" + étage + '\'' +
                 ", capacité='" + getCapacité() + '\'' +
                 '}' + '\n';
+    }
+
+    public String getNuméroDeChambre() {
+        return numéroDeChambre;
     }
 }

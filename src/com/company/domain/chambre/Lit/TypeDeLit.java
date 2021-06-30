@@ -1,4 +1,4 @@
-package com.company.domain.Lit;
+package com.company.domain.chambre.Lit;
 
 public enum TypeDeLit {
     KING_SIZE,

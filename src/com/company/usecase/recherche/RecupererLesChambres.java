@@ -1,6 +1,6 @@
-package com.company.usecase;
+package com.company.usecase.recherche;
 
-import com.company.domain.Chambre;
+import com.company.domain.chambre.Chambre;
 
 import java.util.List;
 
@@ -13,6 +13,6 @@ public class RecupererLesChambres {
     }
 
     public List<Chambre> exécuter() {
-        return chambrePort.getAllChambers();
+        return chambrePort.listerChambres();
     }
 }

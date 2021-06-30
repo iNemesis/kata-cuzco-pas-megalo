@@ -1,11 +1,8 @@
-package com.company.usecase;
-
-import com.company.domain.Chambre;
-import com.company.domain.Lit.Lit;
-import com.company.domain.SalleDeBainType;
-import com.company.infrastructure.ChambreAdapter;
-import com.company.infrastructure.ChambreAdapterMock;
-import org.junit.jupiter.api.Test;
+import com.company.domain.chambre.Chambre;
+import com.company.domain.chambre.Lit.Lit;
+import com.company.domain.chambre.SalleDeBainType;
+import com.company.usecase.recherche.ChambrePort;
+import com.company.usecase.recherche.RecupererLesChambres;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.company.domain;
-
-import com.company.domain.Lit.Lit;
+import com.company.domain.chambre.Chambre;
+import com.company.domain.chambre.Lit.Lit;
+import com.company.domain.chambre.SalleDeBainType;
 
 import java.util.List;
 
