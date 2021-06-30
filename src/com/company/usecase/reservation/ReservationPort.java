@@ -1,10 +1,11 @@
 package com.company.usecase.reservation;
 
-import com.company.domain.chambre.Chambre;
 import com.company.domain.reservation.Reservation;
 
 import java.time.LocalDate;
 
 public interface ReservationPort {
-    Reservation reserverChambre(LocalDate jourAReserver, Chambre Chambre) throws Exception;
+    Reservation sauvegarderReservation(Reservation réservation) throws Exception;
+
+    boolean estReservationExistePourCetteDateEtCetteChambre(LocalDate jourAReserver, String numéroDeChambre);
 }

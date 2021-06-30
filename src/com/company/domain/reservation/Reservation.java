@@ -17,14 +17,26 @@ public class Reservation {
         this.chambre = chambre;
     }
 
-    public static Reservation creer(LocalDate date, Chambre chambre) throws Exception {
+    public static Reservation creer(LocalDate date, Chambre chambre, boolean estChambreDéjàRéservée) throws Exception {
         UUID id = UUID.randomUUID();
 
         if (date.isBefore(LocalDate.now())) {
             throw new Exception("Oh non ! La date ne peut pas être dans le passé.");
         }
 
+        if(estChambreDéjàRéservée){
+            throw new Exception("Oups cette chambre a déjà quelqu'un dedans pile le jour où tu voulais y aller, CHEH ");
+        }
+
         return new Reservation(id, date, chambre);
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public Chambre getChambre() {
+        return chambre;
     }
 
     @Override

@@ -1,11 +1,9 @@
 package com.company.usecase.reservation;
 
-import com.company.domain.chambre.Chambre;
 import com.company.domain.reservation.Reservation;
 import com.company.usecase.recherche.ChambrePort;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 public class ReserverUneChambre {
     ReservationPort reservationPort;
@@ -18,7 +16,9 @@ public class ReserverUneChambre {
 
     public Reservation exécuter(LocalDate jourAReserver, String numéroDeChambre) throws Exception {
         var chambreARéserver = chambrePort.récupérerChambreParNuméro(numéroDeChambre);
+        boolean estChambreDéjàRéservée = reservationPort.estReservationExistePourCetteDateEtCetteChambre(jourAReserver,numéroDeChambre);
+        Reservation reservation = Reservation.creer(jourAReserver, chambreARéserver, estChambreDéjàRéservée);
 
-        return reservationPort.reserverChambre(jourAReserver, chambreARéserver);
+        return reservationPort.sauvegarderReservation(reservation);
     }
 }

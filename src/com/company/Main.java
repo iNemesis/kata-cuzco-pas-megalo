@@ -23,5 +23,6 @@ public class Main {
         var demain = LocalDate.now().plusDays(1);
         var numéroDeChambreAReserver = "101";
         reservationApplication.reserverUneChambre(demain, numéroDeChambreAReserver);
+        reservationApplication.reserverUneChambre(demain, numéroDeChambreAReserver);
     }
 }
